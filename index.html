@@ -60,135 +60,136 @@
     .datCuocTien {
         display: none;
     }
-    
+
     /* Absolute Center Spinner */
-.loading {
-  position: fixed;
-  z-index: 999;
-  height: 2em;
-  width: 2em;
-  overflow: visible;
-  margin: auto;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
+    .loading {
+        position: fixed;
+        z-index: 999;
+        height: 2em;
+        width: 2em;
+        overflow: visible;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
 
-/* Transparent Overlay */
-.loading:before {
-  content: '';
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.3);
-}
+    /* Transparent Overlay */
+    .loading:before {
+        content: '';
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.3);
+    }
 
-/* :not(:required) hides these rules from IE9 and below */
-.loading:not(:required) {
-  /* hide "loading..." text */
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
+    /* :not(:required) hides these rules from IE9 and below */
+    .loading:not(:required) {
+        /* hide "loading..." text */
+        font: 0/0 a;
+        color: transparent;
+        text-shadow: none;
+        background-color: transparent;
+        border: 0;
+    }
 
-.loading:not(:required):after {
-  content: '';
-  display: block;
-  font-size: 10px;
-  width: 1em;
-  height: 1em;
-  margin-top: -0.5em;
-  -webkit-animation: spinner 1500ms infinite linear;
-  -moz-animation: spinner 1500ms infinite linear;
-  -ms-animation: spinner 1500ms infinite linear;
-  -o-animation: spinner 1500ms infinite linear;
-  animation: spinner 1500ms infinite linear;
-  border-radius: 0.5em;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.5) -1.5em 0 0 0, rgba(0, 0, 0, 0.5) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
-  box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
-}
+    .loading:not(:required):after {
+        content: '';
+        display: block;
+        font-size: 10px;
+        width: 1em;
+        height: 1em;
+        margin-top: -0.5em;
+        -webkit-animation: spinner 1500ms infinite linear;
+        -moz-animation: spinner 1500ms infinite linear;
+        -ms-animation: spinner 1500ms infinite linear;
+        -o-animation: spinner 1500ms infinite linear;
+        animation: spinner 1500ms infinite linear;
+        border-radius: 0.5em;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.5) -1.5em 0 0 0, rgba(0, 0, 0, 0.5) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+        box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+    }
 
-/* Animation */
+    /* Animation */
 
 @-webkit-keyframes spinner {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
+        0% {
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
 @-moz-keyframes spinner {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
+        0% {
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
 @-o-keyframes spinner {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
+        0% {
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
 @keyframes spinner {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
+        0% {
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
 </style>
 
 <body style="margin: 0px; position: fix;"
     ontouchstart="dragStart(event)"
     ontouchmove="drag(event)"
     >
-    <meta name="viewport" 
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-      
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <div id="loadingBackground" style="background-color: #9acdda; width: 424px; height: 820px; position: absolute; z-index: 998"></div>
     <div id="loading" class="loading" style=""></div>
     <!--Thanh tiền-->
     <div style="display: block; margin-left: auto; margin-right: auto">
@@ -381,7 +382,7 @@
             if ((checkTai == true && tong > 10) || (checkXiu == true && tong < 10)) {
                 localStorage.tien = money + soTienDaDat*1.98;
             }
-            
+
             tmpMoney = localStorage.tien;
 
             checkTai = false;
@@ -402,19 +403,26 @@
         }
     }
     // Đếm ngược thời gian đặt cược
-    var demThoiGian = 45;
+    var demThoiGian = 52;
+    
     function demNguoc() {
         document.getElementById('demNguoc').innerHTML = demThoiGian;
         demThoiGian--;
         setTimeout('demNguoc()', 1000);
-
+        
+        if(demThoiGian > 45){
+        
+    }else{
+        loadingBackground.style.display = 'none';
+        loading.style.display = 'none';
+    }
         if (demThoiGian > 0) {
             bat.style.display = 'none';
             bat.style.left = '25.6%';
             bat.style.top = '10.6%';
-            if (tmpMoney){}
-            else{
-                tmpMoney = money;}
+            if (tmpMoney) {} else {
+                tmpMoney = money;
+            }
         }
         if (demThoiGian > -3) {
             document.getElementById('thoiGianMoBat').innerHTML = ''
@@ -432,7 +440,7 @@
             }
 
         } else if (demThoiGian == -2) {
-             cheTai.style.display = 'none';
+            cheTai.style.display = 'none';
             cheXiu.style.display = 'none';
             tungXucXac.style.display = 'none';
             cheo.style.display = 'none';
@@ -627,17 +635,17 @@
     var tmpMoney;
     function bet() {
         datCuoc.style.display = 'none';
-        if (soTienDatCuoc > money){
+        if (soTienDatCuoc > money) {
             soTienDatCuoc = 0;
             thieuTien.style.display = 'block';
         }
         if (chonTai == true) {
-            if(soTienDaDat <= tmpMoney){
-            soTienDaDat += soTienDatCuoc;
-            soTienDaDat = Math.floor(soTienDaDat);
-            soTienDaDatAE = soTienDaDat.toLocaleString("en");
+            if (soTienDaDat <= tmpMoney) {
+                soTienDaDat += soTienDatCuoc;
+                soTienDaDat = Math.floor(soTienDaDat);
+                soTienDaDatAE = soTienDaDat.toLocaleString("en");
             }
-            
+
             if (soTienDaDat > tmpMoney) {
                 soTienDaDatAE = 0;
                 soTienDaDat = 0;
@@ -656,7 +664,7 @@
             checkTai = true;
             checkXiu = false;
             cheXiu.style.display = 'block';
-            
+
 
         }
         if (chonXiu == true) {
@@ -676,12 +684,12 @@
             document.getElementById('datXiu').src = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
             soTienDatXiu.style.display = 'none';
             chonXiu = false;
-            
+
             checkXiu = true;
             checkTai = false;
             cheTai.style.display = 'block';
         }
-        
+
         soTienDatCuoc = 0;
     }
     function soiCau() {
@@ -691,19 +699,19 @@
             }
         }
         document.getElementById('cau1').src = localStorage.cau1;
-            document.getElementById('cau2').src = localStorage.cau2;
-            document.getElementById('cau3').src = localStorage.cau3;
-            document.getElementById('cau4').src = localStorage.cau4;
-            document.getElementById('cau5').src = localStorage.cau5;
-            document.getElementById('cau6').src = localStorage.cau6;
-            document.getElementById('cau7').src = localStorage.cau7;
-            document.getElementById('cau8').src = localStorage.cau8;
-            document.getElementById('cau9').src = localStorage.cau9;
-            document.getElementById('cau10').src = localStorage.cau10;
-            document.getElementById('cau11').src = localStorage.cau11;
-            document.getElementById('cau12').src = localStorage.cau12;
+        document.getElementById('cau2').src = localStorage.cau2;
+        document.getElementById('cau3').src = localStorage.cau3;
+        document.getElementById('cau4').src = localStorage.cau4;
+        document.getElementById('cau5').src = localStorage.cau5;
+        document.getElementById('cau6').src = localStorage.cau6;
+        document.getElementById('cau7').src = localStorage.cau7;
+        document.getElementById('cau8').src = localStorage.cau8;
+        document.getElementById('cau9').src = localStorage.cau9;
+        document.getElementById('cau10').src = localStorage.cau10;
+        document.getElementById('cau11').src = localStorage.cau11;
+        document.getElementById('cau12').src = localStorage.cau12;
     }
-   
+
     dm();
     soiCau();
     tienDatCuoc();
