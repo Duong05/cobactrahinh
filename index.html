@@ -1,0 +1,714 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title>tai xiu khong bip</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<style type="text/css" media="all">
+
+@font-face {
+    src: url(MC.ttf);
+    font-family: Mancity;
+}
+@font-face {
+    src: url(Euro.ttf);
+    font-family: Euro;
+}
+@font-face {
+    src: url(LaLiga.ttf);
+    font-family: Laliga;
+}
+
+    body {
+        background-color: #a5e7f85f;
+        width: 424px;
+        height: 820px;
+    }
+
+    #demNguoc {
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 27%;
+        margin: auto;
+        font-family: Mancity;
+        font-size: 400%;
+        color: #f0cb5e;
+
+    }
+    #thoiGianMoBat {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 10%;
+        margin: auto;
+        font-family: Euro;
+        font-size: 200%;
+        color: #27464e;
+    }
+    .xucXac {
+        position: absolute;
+        width: 10%;
+        height: 5%;
+        z-index: 2;
+    }
+    .datCuocTien {
+        display: none;
+    }
+    
+    /* Absolute Center Spinner */
+.loading {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: visible;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Transparent Overlay */
+.loading:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+.loading:not(:required) {
+  /* hide "loading..." text */
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.loading:not(:required):after {
+  content: '';
+  display: block;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  margin-top: -0.5em;
+  -webkit-animation: spinner 1500ms infinite linear;
+  -moz-animation: spinner 1500ms infinite linear;
+  -ms-animation: spinner 1500ms infinite linear;
+  -o-animation: spinner 1500ms infinite linear;
+  animation: spinner 1500ms infinite linear;
+  border-radius: 0.5em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.5) -1.5em 0 0 0, rgba(0, 0, 0, 0.5) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+  box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+}
+
+/* Animation */
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+</style>
+
+<body style="margin: 0px; position: fix;"
+    ontouchstart="dragStart(event)"
+    ontouchmove="drag(event)"
+    >
+    <meta name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+      
+    <div id="loading" class="loading" style=""></div>
+    <!--Thanh tiền-->
+    <div style="display: block; margin-left: auto; margin-right: auto">
+        <img src="bar.png" alt="bar" style="width: 55%; height: 6%; position: absolute; right: 0%;">
+    </div>
+
+    <img src="koCoTien.png" id="thieuTien" style="position: absolute; width: 60%; height: 17%; left: 20%; display: none">
+
+    <div id="mainDiv">
+        <!--Hiệu ứng tung xúc xắc-->
+        <img src="tungXucXac.gif" id="tungXucXac" style="position: absolute; top: 20% ;right: 0%; width: 60%;height: 10%; z-index: 2; display: none " />
+        <img src="cheo.gif" id="cheo" style="position: absolute; top: 20% ;left: 0%; width: 60%;height: 20%; z-index: 2; display: none " />
+        <img src="duoi.gif" id="duoi" style="position: absolute; top: 20% ;left: 45%; width: 20%;height: 40%; z-index: 2; display:none " />
+
+
+        <img src="tx.png" alt="tai xiu" style="width: 100%; height: 30%; position: absolute; top: 10%" />
+
+
+        <span id="demNguoc"></span>
+        <span id="thoiGianMoBat"></span>
+
+        <!--3 Viên Xúc Xắc-->
+        <img class="xucXac" id="xx1" style="left: 48%; top: 28%">
+        <img class="xucXac" id="xx2" style="left: 55%; top: 22%">
+        <img class="xucXac" id="xx3" style="left: 38%; top: 23%">
+
+        <!--bát-->
+        <img src="bat.png" style="width: 50%; height: 25%; position: absolute; left: 25.6%; top: 10.6%; display: none; z-index: 4" id="bat2" />
+
+        <img src="bat.png" style="width: 50%; height: 25%; position: absolute; left: 25.6%; top: 10.6%; display: none; z-index: 3" id="bat" draggable="true" />
+
+
+        <!--đặt cược-->
+        <div>
+
+            <img src="tai.png" id="tai" style="position: absolute; z-index: 2; width: 20%; top: 20%; left: 20%; transform: translate(-50%,-50%);" onclick="tinhTien()">
+
+            <img src="xiu.png" id="xiu" style="position: absolute; z-index: 2;width: 20%; top: 20%; left: 81%; transform: translate(-50%,-50%);">
+
+            <div id="tienTai" style=" font-family: LaLiga; color:#dbdbb7e7; font-size: 95%; position: absolute; width: 25%; height: 3%; top: 27.8%; left: 5%; text-align: center">
+                0
+            </div>
+
+            <div id="tienXiu" style=" font-family: LaLiga; color:#dbdbb7e7; font-size: 95%; position: absolute; width: 25%; height: 3%; top: 27.8%; left: 71.5%; text-align: center">
+                0
+            </div>
+
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="datTai" style=" width: 21.8%; height: 2.9%; position: absolute; left: 10.2%; top: 30.85%;" onclick="datTai()" />
+
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="datXiu" style="width: 21.8%; height: 2.9%; position: absolute; left: 69.2%; top: 30.65%;" onclick="datXiu()" />
+
+            <div id="cheTai" style=" width: 25%; height: 4%; position: absolute; left: 10%; top: 30%; display: none"></div>
+            <div id="cheXiu" style=" width: 25%; height: 4%; position: absolute;left: 68%; top: 30%; display: none"></div>
+
+            <div id="soTienDatTai" style="position: absolute; font-size: 85%; color: #dbdbb7e7; font-family: LaLiga; text-align: center; width: 20%; height: 2%; top: 31.5%; left: 11%; display: none;">
+
+            </div>
+
+            <div id="soTienDatXiu" style=" position: absolute; font-size: 85%; color: #dbdbb7e7; font-family: LaLiga; text-align: center; width: 20%; height: 2%; top: 31.5%; left: 70%; display: none;"></div>
+
+            <img src="datCuoc.png" id="datCuoc" style="width: 100%; height: 20%; position: absolute; top: 33%; left: 2%; display: none" />
+
+            <div id="1k" class="datCuocTien" style=" width: 8%; height: 3%; position: absolute; top: 43%; left:4%;" onclick="k1()"></div>
+
+            <div id="10k" class="datCuocTien" style="width: 8%; height: 3%; position: absolute; top: 43%; left:16%;" onclick="k10()"></div>
+
+            <div id="50k" class="datCuocTien" style=" width: 8%; height: 3%; position: absolute; top: 43%; left:28%;" onclick="k50()"></div>
+
+            <div id="100k" class="datCuocTien" style=" width: 8%; height: 3%; position: absolute; top: 43%; left:40%;" onclick="k100()"></div>
+
+            <div id="500k" class="datCuocTien" style=" width: 8%; height: 3%; position: absolute; top: 43%; left:52%;" onclick="k500()"></div>
+
+            <div id="5m" class="datCuocTien" style=" width: 8%; height: 3%; position: absolute; top: 43%; left:64%;" onclick="m5()"></div>
+
+            <div id="10m" class="datCuocTien" style=" width: 8%; height: 3%; position: absolute; top: 43%; left:76%;" onclick="m10()"></div>
+
+            <div id="50m" class="datCuocTien" style=" width: 8%; height: 3%; position: absolute; top: 43%; left:88%;" onclick="m50()"></div>
+
+            <div id="allIn" class="datCuocTien" style=" width: 20%; height: 3.7%; position: absolute; top: 47.6%; left:16%;" onclick="allin()"></div>
+
+            <div id="bet" class="datCuocTien" style=" width: 24%; height: 4.3%; position: absolute; top: 47.2%; left:38%;" onclick="bet()"></div>
+
+            <div id="cancel" class="datCuocTien" style=" width: 20%; height: 3.7%; position: absolute; top: 47.6%; left:64%;" onclick="cancel()"></div>
+        </div>
+
+        <!--Soi Cầu-->
+        <img id="cau12" style=" position: absolute; width: 4.5%; height: 2.5%; top: 36.56%; left: 19.5%">
+        <img id="cau11" style=" position: absolute; width: 4.5%; height: 2.5%; top: 36.56%; left: 24.6%">
+        <img id="cau10" style=" position: absolute; width: 4.5%; height: 2.5%; top: 36.56%; left: 29.7%">
+        <img id="cau9" style=" position: absolute; width: 4.5%; height: 2.5%; top: 36.56%; left: 34.8%">
+        <img id="cau8" style=" position: absolute; width: 4.5%; height: 2.5%; top: 36.56%; left: 39.9%">
+        <img id="cau7" style=" position: absolute; width: 4.5%; height: 2.5%; top: 36.56%; left: 45%">
+        <img id="cau6" style=" position: absolute; width: 4.5%; height: 2.5%; top: 36.56%; left: 50.1%">
+        <img id="cau5" style=" position: absolute; width: 4.5%; height: 2.5%; top: 36.56%; left: 55.3%">
+        <img id="cau4" style=" position: absolute; width: 4.5%; height: 2.5%; top: 36.56%; left: 60.5%">
+        <img id="cau3" style=" position: absolute; width: 4.5%; height: 2.5%; top: 36.56%; left: 65.6%">
+        <img id="cau2" style=" position: absolute; width: 4.5%; height: 2.5%; top: 36.56%; left: 70.7%">
+        <img id="cau1" style=" position: absolute; width: 4.5%; height: 2.5%; top: 36.56%; left: 75.9%">
+    </div>
+
+
+    <!--text-->
+    <div style="font-family: 'Smooch Sans', sans-serif; position: absolute; text-align: center; bottom: 3%; width: 100%; font-size: 120%">
+        Chú ý: Game chỉ chơi được trên điện thoại, không chơi được trên máy tính do nhà phát hành chưa biết làm.
+    </div>
+
+    <div id="tien" style="font-family: LaLiga; color: #dbdbb7e7; font-size: 120%; position: absolute; left: 72.7%; top: 2.8%; margin: auto; transform: translate(-50%,-50%)">
+        0
+    </div>
+
+
+    <!--Xác định khi nào thì đĩa được mở-->
+    <div id="day" style=" position: absolute; border-radius: 100%; width: 35%; height: 17.4%;top: 18.5%; left: 33%; color: red"></div>
+    <div style=" width: 5px; height: 5px; position: absolute; left: 211px; top: 225px; "></div>
+
+    <div id="xy" style="position: absolute; z-index: 10"></div>
+    <div id="iz" style="position: absolute; bottom: 200px"></div>
+</body>
+
+
+<script type="text/javascript" charset="utf-8">
+
+    var choPhepDatCuoc = document.getElementsByClassName("datCuocTien");
+
+    // Di chuyển bát theo con trỏ chuột
+
+    var el,
+    avail;
+    function dragStart(evt) {
+        el = evt.target;
+        if (el.getAttribute('draggable') == 'true') {
+            avail = 'available';
+        } else {
+            avail = '';
+        }
+    }
+    function drag(evt) {
+        if (avail == 'available') {
+            el.style.left = evt.touches[0].clientX-el.clientWidth/2;
+            el.style.top = evt.touches[0].clientY-el.clientHeight/2;
+        } else {}
+        evt.preventDefault();
+    }
+
+
+    // đếm ngược thời gian mở bát
+    var demThoiGianMoBat = 15;
+    function moBat() {
+        document.getElementById('thoiGianMoBat').innerHTML = demThoiGianMoBat;
+        demThoiGianMoBat--;
+
+        if (demThoiGian==-3) {
+            demThoiGianMoBat = 14;
+        }
+
+        if (demThoiGianMoBat == -1) {
+            demThoiGian = 45;
+            demThoiGianMoBat = 15;
+
+
+            localStorage.cau12 = localStorage.cau11;
+            localStorage.cau11 = localStorage.cau10;
+            localStorage.cau10 = localStorage.cau9;
+            localStorage.cau9 = localStorage.cau8;
+            localStorage.cau8 = localStorage.cau7;
+            localStorage.cau7 = localStorage.cau6;
+            localStorage.cau6 = localStorage.cau5;
+            localStorage.cau5 = localStorage.cau4;
+            localStorage.cau4 = localStorage.cau3;
+            localStorage.cau3 = localStorage.cau2;
+            localStorage.cau2 = localStorage.cau1;
+            if (tong > 10) {
+                localStorage.cau1 = "cauTai.png";
+            } else {
+                localStorage.cau1 = "cauXiu.png"
+            }
+            document.getElementById('cau1').src = localStorage.cau1;
+            document.getElementById('cau2').src = localStorage.cau2;
+            document.getElementById('cau3').src = localStorage.cau3;
+            document.getElementById('cau4').src = localStorage.cau4;
+            document.getElementById('cau5').src = localStorage.cau5;
+            document.getElementById('cau6').src = localStorage.cau6;
+            document.getElementById('cau7').src = localStorage.cau7;
+            document.getElementById('cau8').src = localStorage.cau8;
+            document.getElementById('cau9').src = localStorage.cau9;
+            document.getElementById('cau10').src = localStorage.cau10;
+            document.getElementById('cau11').src = localStorage.cau11;
+            document.getElementById('cau12').src = localStorage.cau12;
+
+            if ((checkTai == true && tong > 10) || (checkXiu == true && tong < 10)) {
+                localStorage.tien = money + soTienDaDat*1.98;
+            }
+            
+            tmpMoney = localStorage.tien;
+
+            checkTai = false;
+            checkXiu = false;
+            soTienDaDat = 0;
+            soTienDaDatAE = 0;
+            document.getElementById('tienTai').innerHTML = soTienDaDatAE;
+            document.getElementById('tienXiu').innerHTML = soTienDaDatAE;
+            soTienDatCuoc = 0;
+            soTienDatCuocAE = 0;
+        }
+
+        if (demThoiGianMoBat < 1) {
+            document.getElementById('datTai').src = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+            soTienDatTai.style.display = "none";
+            document.getElementById('datXiu').src = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+            soTienDatXiu.style.display = "none";
+        }
+    }
+    // Đếm ngược thời gian đặt cược
+    var demThoiGian = 45;
+    function demNguoc() {
+        document.getElementById('demNguoc').innerHTML = demThoiGian;
+        demThoiGian--;
+        setTimeout('demNguoc()', 1000);
+
+        if (demThoiGian > 0) {
+            bat.style.display = 'none';
+            bat.style.left = '25.6%';
+            bat.style.top = '10.6%';
+            if (tmpMoney){}
+            else{
+                tmpMoney = money;}
+        }
+        if (demThoiGian > -3) {
+            document.getElementById('thoiGianMoBat').innerHTML = ''
+        }
+        if (demThoiGian==-1) {
+            tungXucXac.style.display = 'block';
+            bat.style.display = 'block';
+            cheo.style.display = 'block';
+            duoi.style.display = 'block';
+            bat2.style.display = 'block';
+            datCuoc.style.display = "none";
+            thieuTien.style.display = "none";
+            for (var i = 0; i < choPhepDatCuoc.length; i++) {
+                choPhepDatCuoc[i].style.display = "none";
+            }
+
+        } else if (demThoiGian == -2) {
+             cheTai.style.display = 'none';
+            cheXiu.style.display = 'none';
+            tungXucXac.style.display = 'none';
+            cheo.style.display = 'none';
+            duoi.style.display = 'none';
+            var randomAllow = true;
+        } else if (demThoiGian <= -3) {
+            bat2.style.display = 'none';
+            document.getElementById('demNguoc').innerHTML = '';
+            moBat();
+        }
+
+    }
+
+    //random xuc xac
+    function random() {
+        if (demThoiGian > -1) {
+            var random1 = Math.floor(Math.random()*6)+1;
+            var random2 = Math.floor(Math.random()*6)+1;
+            var random3 = Math.floor(Math.random()*6)+1;
+            tong = random1 + random2 + random3;
+            var randomRotate1 = (Math.floor(Math.random()*180)) + 'deg';
+            var randomRotate2 = (Math.floor(Math.random()*180)) + 'deg';
+            var randomRotate3 = (Math.floor(Math.random()*180)) + 'deg';
+            xx1.src = random1 + '.png';
+            xx2.src = random2 + '.png';
+            xx3.src = random3 + '.png';
+            xx1.style.transform = "rotate(" + randomRotate1 + ")";
+            xx2.style.transform = "rotate(" + randomRotate2 +")";
+            xx3.style.transform = "rotate(" + randomRotate3 + ")";
+            xx1.style.display = 'none';
+            xx2.style.display = 'none';
+            xx3.style.display = 'none';
+        } else {
+            xx1.style.display = 'block';
+            xx2.style.display = 'block';
+            xx3.style.display = 'block';
+        }
+        setTimeout('random()', 1000);
+    }
+
+    // chọn nơi đặt cược--
+    function datTai() {
+        document.getElementById('datTai').src = "datTai.png";
+        document.getElementById('datXiu').src = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+        soTienDatTai.style.display = "block";
+        soTienDatXiu.style.display = "none";
+        datCuoc.style.display = "block";
+        chonTai = true;
+        chonXiu = false;
+        thieuTien.style.display = 'none';
+        for (var i = 0; i < choPhepDatCuoc.length; i++) {
+            choPhepDatCuoc[i].style.display = "block";
+        }
+        soTienDatCuoc = 0;
+        if (demThoiGian < 0) {
+            datCuoc.style.display = "none";
+            for (i = 0; i < choPhepDatCuoc.length; i++) {
+                choPhepDatCuoc[i].style.display = "none";
+            }
+        }
+    }
+    function datXiu() {
+        document.getElementById('datXiu').src = "datXiu.png";
+        document.getElementById('datTai').src = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+        soTienDatXiu.style.display = "block";
+        soTienDatTai.style.display = "none";
+        datCuoc.style.display = "block";
+        chonTai = false;
+        chonXiu = true;
+        thieuTien.style.display = 'none';
+        for (var i = 0; i < choPhepDatCuoc.length; i++) {
+            choPhepDatCuoc[i].style.display = "block";
+        }
+        soTienDatCuoc = 0;
+        if (demThoiGian < 0) {
+            datCuoc.style.display = "none";
+            for (var i = 0; i < choPhepDatCuoc.length; i++) {
+                choPhepDatCuoc[i].style.display = "none";
+            }
+        }
+    }
+
+    //thông báo khi kéo bát ra khỏi vị trí
+    var nhay = 15;
+    allowNhay = false;
+
+    function keo() {
+        var toaDo = day.getBoundingClientRect();
+        var toaDoDia = bat.getBoundingClientRect();
+
+        if (bat.style.display == "none") {
+            toaDoDia.x = toaDo.x + 71;
+            toaDoDia.y = toaDo.y + 74;
+        }
+
+        nhay++;
+        if (nhay > 24) {
+            nhay = 15;
+        }
+
+        var x = ((toaDoDia.x+toaDoDia.height/2) - (toaDo.x + toaDo.height/2));
+        var y = ((toaDoDia.y+toaDoDia.width/1.5) - (toaDo.y + toaDo.width/2));
+        if ((x > 145 || x < -131) || (y > 125 || y < -115) || (x > 105 && y > 61) || (x < -91 && y > 67) || (x < -97 && y > 76) || (x > 100 && y > 90)) {
+            allowNhay = true;
+        }
+        if (allowNhay == true) {
+            if (tong > 10) {
+                if (nhay % 2 == 0) {
+                    tai.style.width = "18%";
+                } else {
+                    tai.style.width = "22%";
+                }
+            } else {
+                if (nhay % 2 == 0) {
+                    xiu.style.width = "18%";
+                } else {
+                    xiu.style.width = "22%";
+                }
+            }
+            if (demThoiGian > -1) {
+                allowNhay = false;
+            }
+        }
+        setTimeout('keo()', 170);
+    }
+
+    //Tính tiền--
+
+    function dm() {
+        if (localStorage.tien) {
+            if (localStorage.tien < 0) {
+                localStorage.tien = 0;
+            }
+        } else {
+            localStorage.setItem("tien", 20000);
+        }
+        money = localStorage.tien - 0;
+
+        var lamTronTien = Math.floor(money);
+        var tienBac = lamTronTien.toLocaleString("en");
+        document.getElementById("tien").innerHTML = tienBac;
+        setTimeout("dm()", 100);
+    }
+
+    // tiền đặt cược--
+    var chonTai = false;
+    var chonXiu = false;
+    var soTienDatCuoc = 0;
+    function tienDatCuoc() {
+        soTienDatCuocAE = soTienDatCuoc.toLocaleString("en");
+        if (chonTai == true) {
+            document.getElementById("soTienDatTai").innerHTML = soTienDatCuocAE;
+        }
+        if (chonXiu == true) {
+            document.getElementById("soTienDatXiu").innerHTML = soTienDatCuocAE;
+        }
+        setTimeout('tienDatCuoc()', 10);
+    }
+    function k1() {
+        soTienDatCuoc += 1000;
+    }
+    function k10() {
+        soTienDatCuoc += 10000;
+    }
+    function k50() {
+        soTienDatCuoc += 50000;
+    }
+    function k100() {
+        soTienDatCuoc += 100000;
+    }
+    function k500() {
+        soTienDatCuoc += 500000;
+    }
+    function m5() {
+        soTienDatCuoc += 5000000;
+    }
+    function m10() {
+        soTienDatCuoc += 10000000;
+    }
+    function m50() {
+        soTienDatCuoc += 50000000;
+    }
+    function allin() {
+        soTienDatCuoc = 0;
+        soTienDatCuoc = localStorage.tien - 0;
+        soTienDatCuoc = Math.floor(soTienDatCuoc);
+    }
+    function cancel() {
+        soTienDatCuoc = 0;
+    }
+    var soTienDaDat = 0;
+    var tmpMoney;
+    function bet() {
+        datCuoc.style.display = 'none';
+        if (soTienDatCuoc > money){
+            soTienDatCuoc = 0;
+            thieuTien.style.display = 'block';
+        }
+        if (chonTai == true) {
+            if(soTienDaDat <= tmpMoney){
+            soTienDaDat += soTienDatCuoc;
+            soTienDaDat = Math.floor(soTienDaDat);
+            soTienDaDatAE = soTienDaDat.toLocaleString("en");
+            }
+            
+            if (soTienDaDat > tmpMoney) {
+                soTienDaDatAE = 0;
+                soTienDaDat = 0;
+                soTienDatCuoc = 0;
+                thieuTien.style.display = 'block';
+            } else {
+                localStorage.tien = money - soTienDatCuoc;
+
+            }
+            document.getElementById('tienTai').innerHTML = soTienDaDatAE;
+
+            document.getElementById('datTai').src = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+            soTienDatTai.style.display = 'none';
+            chonTai = false;
+            soTienDatCuoc = 0;
+            checkTai = true;
+            checkXiu = false;
+            cheXiu.style.display = 'block';
+            
+
+        }
+        if (chonXiu == true) {
+            soTienDaDat += soTienDatCuoc;
+            soTienDaDatAE = soTienDaDat.toLocaleString("en");
+            if (soTienDaDat > tmpMoney) {
+                soTienDaDatAE = 0;
+                soTienDaDat = 0;
+                soTienDatCuoc = 0;
+                thieuTien.style.display = 'block';
+            } else {
+                localStorage.tien = money - soTienDatCuoc;
+
+            }
+
+            document.getElementById('tienXiu').innerHTML = soTienDaDatAE;
+            document.getElementById('datXiu').src = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+            soTienDatXiu.style.display = 'none';
+            chonXiu = false;
+            
+            checkXiu = true;
+            checkTai = false;
+            cheTai.style.display = 'block';
+        }
+        
+        soTienDatCuoc = 0;
+    }
+    function soiCau() {
+        if (localStorage.cau1) {} else {
+            for (i = 1; i < 13; i++) {
+                localStorage.setItem("cau"+i, "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==");
+            }
+        }
+        document.getElementById('cau1').src = localStorage.cau1;
+            document.getElementById('cau2').src = localStorage.cau2;
+            document.getElementById('cau3').src = localStorage.cau3;
+            document.getElementById('cau4').src = localStorage.cau4;
+            document.getElementById('cau5').src = localStorage.cau5;
+            document.getElementById('cau6').src = localStorage.cau6;
+            document.getElementById('cau7').src = localStorage.cau7;
+            document.getElementById('cau8').src = localStorage.cau8;
+            document.getElementById('cau9').src = localStorage.cau9;
+            document.getElementById('cau10').src = localStorage.cau10;
+            document.getElementById('cau11').src = localStorage.cau11;
+            document.getElementById('cau12').src = localStorage.cau12;
+    }
+   
+    dm();
+    soiCau();
+    tienDatCuoc();
+    random();
+    keo();
+    demNguoc();
+</script>
+</html>
