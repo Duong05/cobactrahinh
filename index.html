@@ -382,7 +382,7 @@
             document.getElementById('cau11').src = localStorage.cau11;
             document.getElementById('cau12').src = localStorage.cau12;
 
-            if ((checkTai == true && tong > 10) || (checkXiu == true && tong < 10)) {
+            if ((checkTai == true && tong > 10) || (checkXiu == true && tong <= 10)) {
                 localStorage.tien = money + soTienDaDat*1.98;
             }
 
