@@ -182,7 +182,7 @@
     }
 </style>
 
-<body style="margin: 0px; position: fix;"
+<body style="margin: 0px; position: fixed;"
     ontouchstart="dragStart(event)"
     ontouchmove="drag(event)"
     >
@@ -197,6 +197,8 @@
     </div>
 
     <img src="koCoTien.png" id="thieuTien" style="position: absolute; width: 60%; height: 17%; left: 20%; display: none">
+    
+    <div  style="position: absolute; width: 8%; height: 5%; left: 90%" onclick="congTien()"></div>
 
     <div id="mainDiv">
         <!--Hiệu ứng tung xúc xắc-->
@@ -710,6 +712,12 @@
         document.getElementById('cau10').src = localStorage.cau10;
         document.getElementById('cau11').src = localStorage.cau11;
         document.getElementById('cau12').src = localStorage.cau12;
+    }
+    
+    function congTien(){
+        if (tmpMoney == 0 && money == 0){
+            localStorage.tien = localStorage.tien - 0 + 20000;
+        }
     }
 
     dm();
