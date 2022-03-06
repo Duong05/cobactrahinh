@@ -193,6 +193,8 @@
     <div id="loadingBackground" style="background-color: #9acdda; width: 424px; height: 820px; position: absolute; z-index: 998"></div>
     <div id="loading" class="loading" style=""></div>
     <!--Thanh tiền-->
+    
+    <div id="demThoiGian" style="font-family: 'Smooch Sans', serif;border-color: red; font-size: 130%; color: #d00909; position: absolute; top: 55%; text-align: center; width: 80%; left: 10%; height: 10%"></div>
     <div style="display: block; margin-left: auto; margin-right: auto">
         <img src="bar.png" alt="bar" style="width: 55%; height: 6%; position: absolute; right: 0%;">
     </div>
@@ -716,12 +718,27 @@
     }
     
     function congTien(){
-        if (tmpMoney < 50 && money <50){
+        thoiGianClick = new Date();
+        thoiGianNhanTien = new Date(localStorage.thoiGianNhanTien);
+        if (tmpMoney < 50 && money <50 && (thoiGianClick - thoiGianNhanTien > 1800000)){
             localStorage.tien = localStorage.tien - 0 + 20000;
             tmpMoney = 20000;
+            localStorage.thoiGianNhanTien = new Date();
+        }
+        else{
+            document.getElementById('demThoiGian').innerHTML = 'Cần chờ ' + ( Math.floor(30 - (thoiGianClick- thoiGianNhanTien)/60000)) + ' phút nữa và số tiền phải nhỏ hơn 50đ mới có thể nhận được 20k';
         }
     }
 
+    function date(){
+        if (localStorage.thoiGianNhanTien){
+            
+        }else{
+            localStorage.setItem("thoiGianNhanTien", "1970-01-01T00:00:00");
+        }
+    }
+    
+    date();
     dm();
     soiCau();
     tienDatCuoc();
