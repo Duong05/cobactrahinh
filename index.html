@@ -341,18 +341,18 @@
 
 
     // đếm ngược thời gian mở bát
-    var demThoiGianMoBat = 15;
+    var demThoiGianMoBat = 10;
     function moBat() {
         document.getElementById('thoiGianMoBat').innerHTML = demThoiGianMoBat;
         demThoiGianMoBat--;
 
         if (demThoiGian==-3) {
-            demThoiGianMoBat = 14;
+            demThoiGianMoBat = 9;
         }
 
         if (demThoiGianMoBat == -1) {
-            demThoiGian = 45;
-            demThoiGianMoBat = 15;
+            demThoiGian = 30;
+            demThoiGianMoBat = 10;
 
 
             localStorage.cau12 = localStorage.cau11;
@@ -408,14 +408,14 @@
         }
     }
     // Đếm ngược thời gian đặt cược
-    var demThoiGian = 52;
+    var demThoiGian = 42;
     
     function demNguoc() {
         document.getElementById('demNguoc').innerHTML = demThoiGian;
         demThoiGian--;
         setTimeout('demNguoc()', 1000);
         
-        if(demThoiGian > 45){
+        if(demThoiGian > 30){
         
     }else{
         loadingBackground.style.display = 'none';
